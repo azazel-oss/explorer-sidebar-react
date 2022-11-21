@@ -1,10 +1,9 @@
-function App() {
+import explorer from "./data/explorerData.js";
+import Folder from "./components/Folder.jsx";
+import "./components/App.css";
 
-  return (
-    <div className="App">
-      This is test app
-    </div>
-  )
+function App() {
+  return <Folder data={explorer} />;
 }
 
-export default App
+export default App;
