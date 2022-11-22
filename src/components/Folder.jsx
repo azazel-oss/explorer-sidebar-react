@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import File from "./File.jsx";
+import "./Folder.css";
 
 function Folder({ data }) {
   const [isFolderOpen, setIsFolderOpen] = useState(true);
@@ -7,13 +8,17 @@ function Folder({ data }) {
     <div className="folder">
       {data.isFolder ? (
         <>
-          <div onClick={() => setIsFolderOpen((prevState) => !prevState)}>
-            {data.name} ->
+          <div
+            className={`folder__name ${isFolderOpen ? "" : "collapsed"}`}
+            onClick={() => setIsFolderOpen((prevState) => !prevState)}
+          >
+            <i className={"fa-solid fa-chevron-down"}></i>
+            {data.name}
           </div>
           {isFolderOpen && (
             <ul>
               {data.items.map((item) => (
-                <li className={"folder__list "}>
+                <li key={item.id} className={"folder__list"}>
                   <Folder data={item} />
                 </li>
               ))}

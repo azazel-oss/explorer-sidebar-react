@@ -1,0 +1,21 @@
+.folder__name {
+  background-color: cadetblue;
+  display: inline-block;
+  width: 10rem;
+  padding: 0.5rem;
+}
+
+.folder__name i {
+  margin-right: 5px;
+  transition: transform ease-in 0.2s;
+}
+
+.collapsed i {
+  transform: rotate(-90deg);
+}
+ul {
+  margin-top: 0;
+}
+.folder__list {
+  list-style: none;
+}
