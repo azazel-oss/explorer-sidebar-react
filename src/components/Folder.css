@@ -1,16 +1,24 @@
 .folder__name {
   background-color: cadetblue;
-  display: inline-block;
-  width: 10rem;
+  display: flex;
+  justify-content: space-between;
+  width: 15rem;
   padding: 0.5rem;
+}
+
+.folder .input-container {
+  margin-left: 2.5rem;
 }
 
 .folder__name i {
   margin-right: 5px;
+}
+
+.folder__name .fa-chevron-down {
   transition: transform ease-in 0.2s;
 }
 
-.collapsed i {
+.collapsed .fa-chevron-down {
   transform: rotate(-90deg);
 }
 ul {

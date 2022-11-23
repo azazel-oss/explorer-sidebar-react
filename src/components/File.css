@@ -1,0 +1,9 @@
+.file {
+  display: inline-block;
+  background-color: antiquewhite;
+  width: 15rem;
+}
+
+.file i {
+  margin-right: 5px;
+}
